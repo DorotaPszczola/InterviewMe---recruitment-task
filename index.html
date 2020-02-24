@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-    <section class="hero-container">
+    <section id="sign_up" class="hero-container">
         <div class="hero-gradient"></div>
 
         <div class="hero">
             <h1 class="hero-title">Cloudbudget</h1>
-            <h3 class="hero-content">Cloud budget management for everyone. Only<br> €69.95 a Month After a 7 Day Trial of<br> Up to €4.99 </h3>
-            <button class="btn-sign-up" href="#">sign up</button>
+            <h3 class="hero-content desktop">Cloud budget management for everyone. Only<br> €69.95 a Month After a 7 Day Trial of<br> Up to €4.99 </h3>
+            <h3 class="hero-content tablet">Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of<br> Up to €4.99 </h3>
+            <a class="link-sign-up" href="#"><button class="btn-sign-up" >sign up</button></a>
         </div>
         <div class="logo"></div>
         <nav class="navbar-menu">
@@ -26,7 +27,14 @@
                 <li><a href="#sign_up">sign up</a></li>
             </ul>
         </nav>
-        <!-- <nav class="navbar-hamburger">
+
+        <button class="hamburger">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <nav class="menu-hamburger ">
             <ul>
                 <li><a href="">overview</a></li>
                 <li><a href="#features">features</a></li>
@@ -34,8 +42,46 @@
                 <li><a href="#contact">contact</a></li>
                 <li><a href="#sign_up">sign up</a></li>
             </ul>
-        </nav> -->
+        </nav>
     </section>
+    <section id="features">
+        <div class="title">
+            <h1>Features</h1>
+        </div>
+        <div class="cards">
+            <div class="card card-1">
+                <div class="card-content">
+                    <h3 class="tablet desktop">Supports All Currencies and<br>Cards</h3>
+                    <h3 class="mobile">Supports All Currencies and Cards</h3>
+                    <p class="tablet desktop">We support all popular currencies and is<br>fully customizable to add</p>
+                    <p class="mobile">We support all popular currencies and is fully customizable to add</p>
+                    <span><a href="">Read More</a></span>
+                </div>
+            </div>
+            <div class="card card-2">
+                <div class="card-content">
+                    <h3 class="tablet desktop">Manage your expenses on<br>the go</h3>
+                    <h3 class="mobile">Manage your expenses on the go</h3>
+                    <p class="tablet desktop">You can access your account from<br>anywhere in the world on any device</p>
+                    <p class="mobile">You can access your account from anywhere in the world on any device</p>
 
+                    <span><a href="">Read More</a></span>
+                </div>
+            </div>
+            <div class="card card-3">
+                <div class="card-content">
+                    <h3 class="tablet desktop">Cloud Budget Management<br>Software</h3>
+                    <h3 class="mobile">Cloud Budget Management Software</h3>
+                    <p class="tablet desktop">Our software is made so you can access<br>and manage your budget</p>
+                    <p class="mobile">Our software is made so you can access and manage your budget</p>
+
+                    <span><a href="">Read More</a></span>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+<script src="main.js"></script>
 </body>
 </html>
