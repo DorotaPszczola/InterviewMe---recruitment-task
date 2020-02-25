@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* MIXINS */
 * {
   margin: 0;
   font-family: "Lato";
@@ -8,6 +7,8 @@
   padding: 0;
 }
 
+/* MIXINS */
+/* BODY */
 body {
   max-width: 100vw;
   height: 100%;
@@ -15,7 +16,7 @@ body {
 
 /* Hero */
 .hero-container {
-  background: url(/InterviewMe---recruitment-task/assets/Rectangle_3.png) no-repeat center center;
+  background: url(assets/Rectangle_3.png) no-repeat center center;
   height: 70%;
   background-size: cover;
   position: absolute;
@@ -118,7 +119,7 @@ body {
 }
 
 .logo {
-  background-image: url(/InterviewMe---recruitment-task/assets/logo.png);
+  background-image: url(assets/logo.png);
   position: absolute;
   width: 172px;
   height: 29px;
@@ -155,7 +156,7 @@ body {
   color: #FFFFFF;
 }
 
-/* Tablet & mobile menu under hamburger */
+/* Tablet & mobile hamburger */
 .hamburger {
   position: absolute;
   z-index: 4;
@@ -573,7 +574,7 @@ body {
 }
 
 /* small desktop */
-@media only screen and (min-device-width: 801px) and (max-device-width: 1280px) {
+@media only screen and (min-device-width: 801px) and (max-device-width: 1024px) {
   .technology {
     top: calc(355px + 782px - 124px);
   }
@@ -642,15 +643,29 @@ body {
   .technology .boxes .tech_box {
     margin-top: 0;
   }
-}
-
-.download {
-  top: calc( 782px + 124px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  .download {
+    top: calc( 782px + 124px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border: none;
+  }
+  .download .download-text {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
+  .download .download-slideshow {
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 500px;
+    background-color: inherit;
+    border: none;
+  }
 }
 
 /* mobile */
@@ -678,6 +693,9 @@ body {
     width: 100%;
     height: 100vh;
   }
+  .features {
+    margin-bottom: 150px;
+  }
   .features .cards .card {
     width: 280px;
   }
@@ -690,6 +708,82 @@ body {
   }
   h3.tablet, p.tablet {
     display: none;
+  }
+  .technology {
+    height: calc(226px *5 + 100px);
+  }
+  .technology .boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+  }
+  .technology .boxes .tech_box {
+    margin-top: 0;
+  }
+  .technology div div.tech_box:first-of-type {
+    margin-top: 150px;
+  }
+  .download {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border: none;
+  }
+  .download .download-text {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
+  .download .download-text h2, .download .download-text p, .download .download-text .download-icons {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .download .download-slideshow {
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 300px;
+    background-color: inherit;
+    border: none;
+  }
+  .download .download-slideshow .slideshow-items {
+    width: 100%;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+    position: relative;
+  }
+  .download .download-slideshow .slideshow-items .item-image {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .download .download-slideshow .slideshow-items .tablet {
+    display: none;
+  }
+  .download .download-slideshow .slideshow-items .active-item {
+    z-index: 9;
+  }
+  .download .download-slideshow .slideshow-items .faded-item-left {
+    z-index: 5;
+  }
+  .download .download-slideshow .slideshow-items .faded-item-right {
+    z-index: 5;
+  }
+  .download .download-slideshow .slideshow-items .download-slideshow {
+    width: 50%;
+    position: relative;
+    right: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
