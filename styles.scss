@@ -275,7 +275,7 @@ body {
     min-height: 660px;
     position: relative;
     top: 782px;   /* powoduje rozpychanie na szerokość*/
-    h1 {
+    h2 {
        @include section-title();
     }
     .cards {
@@ -353,12 +353,9 @@ body {
 
 .technology {
     height: 660px;
-    // width: 100%;
-    // display: flex;
     position: relative;
-    top: 782px;   /* powoduje rozpychanie na szerokość*/
-
-    h1 {
+    top: 782px;
+    h2 {
         @include section-title();
     }
     .boxes {
@@ -366,10 +363,8 @@ body {
         justify-content: center;
         flex-wrap: wrap;
         .tech_box {
-            // position: absolute;
             width: 255px;
             height: 226px;
-            // left: 450px;
             margin-top: 170px;
             .box-number {
                 p {
@@ -378,7 +373,6 @@ body {
                 font-weight: bold;
                 font-size: 100px;
                 line-height: 120px;
-                /* identical to box height */
                 text-align: center;
                 color: rgba(16, 16, 16, 0.08);
                 }
@@ -423,6 +417,78 @@ body {
 }
 
 
+/* download */
+
+.download {
+    background: #ED4C5C;
+    height: 500px;
+    position: relative;
+    top: 660px;
+    color: #FFFFFF;
+    display: flex;
+    .download-text {
+        width: 50%;
+        position: relative;
+        h2 {
+            @include section-title();
+            color: #FFFFFF;
+            text-align: left;
+            width:445px;
+            // margin-left: 165px;
+            top: 122px;
+         }
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: justify;
+            position: absolute;
+            width: 445px;
+            height: 64px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 253px;
+        }
+        .download-icons {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 389px;
+            position: absolute;
+            width: 445px;
+            .download-icon {
+                margin-right: 25px;
+                height: 28px;
+            }
+        }
+    }
+    .download-slideshow {
+        width: 50%;
+        position: relative;
+        right: 0;
+        .slideshow-items {
+            .item-image {
+                position: absolute;
+                right: 260px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            .active-item {
+                z-index: 9;
+            }
+            .faded-item-left {
+                z-index: 5;
+                transform: translate(44px, -50%);
+            }
+            .faded-item-right {
+                z-index: 5;
+                transform: translate(-100px, -50%);
+            }
+        }
+    }
+}
+
+
 
 /* Desktop */
 
@@ -435,6 +501,32 @@ body {
     h3.mobile, p.mobile  {
         display: none;
     }
+}
+
+/* small desktop */
+
+@media only screen and (min-device-width: 801px) and (max-device-width: 1280px) {
+
+.technology {
+    top: calc(355px + 782px - 124px)
+}
+
+.download {
+    top: calc(660px + 355px - 124px);
+    .download-text {
+        p, h2, .download-icons {
+            width: 70%;
+        }
+    }
+    .download-slideshow {
+    .slideshow-items {
+        .item-image {
+            // position: absolute;
+            right: 75px;
+            // top: 50%;
+            // transform: translate(0, -50%);
+        }
+    }}}
 }
 
 /* tablet */
@@ -451,6 +543,7 @@ body {
     .logo {
         left: 100px;
     }
+
     .hero {
         h1 {
             font-size: 3rem;
@@ -464,15 +557,41 @@ body {
             display: none;
         }
     }
+
+    
+    h3.mobile, p.mobile {
+        display: none;
+    }
+
     .features {
         .cards {
             flex-direction: column;
             align-content: space-around;
         }
     }
-    h3.mobile, p.mobile {
-        display: none;
+
+    .technology {
+        top: calc( 782px + 124px);
+        display: flex;
+        .title {
+            margin-bottom: 100px;
+        }
+        .boxes {
+            flex-wrap: wrap;
+            align-content: space-around;
+            .tech_box {
+                margin-top: 0;
+            }
+        }
     }
+}
+
+
+.download {
+    top: calc( 782px + 124px);
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -521,6 +640,7 @@ body {
         display: none;
     }
 }
+
 
 
 

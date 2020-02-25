@@ -283,7 +283,7 @@ body {
   /* powoduje rozpychanie na szerokość*/
 }
 
-.features h1 {
+.features h2 {
   position: absolute;
   height: 55px;
   left: 50%;
@@ -389,10 +389,9 @@ body {
   height: 660px;
   position: relative;
   top: 782px;
-  /* powoduje rozpychanie na szerokość*/
 }
 
-.technology h1 {
+.technology h2 {
   position: absolute;
   height: 55px;
   left: 50%;
@@ -431,7 +430,6 @@ body {
   font-weight: bold;
   font-size: 100px;
   line-height: 120px;
-  /* identical to box height */
   text-align: center;
   color: rgba(16, 16, 16, 0.08);
 }
@@ -468,6 +466,102 @@ body {
   padding-bottom: 45px;
 }
 
+/* download */
+.download {
+  background: #ED4C5C;
+  height: 500px;
+  position: relative;
+  top: 660px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.download .download-text {
+  width: 50%;
+  position: relative;
+}
+
+.download .download-text h2 {
+  position: absolute;
+  height: 55px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: calc(845px - 782px);
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #000000;
+  color: #FFFFFF;
+  text-align: left;
+  width: 445px;
+  top: 122px;
+}
+
+.download .download-text p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+  position: absolute;
+  width: 445px;
+  height: 64px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 253px;
+}
+
+.download .download-text .download-icons {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 389px;
+  position: absolute;
+  width: 445px;
+}
+
+.download .download-text .download-icons .download-icon {
+  margin-right: 25px;
+  height: 28px;
+}
+
+.download .download-slideshow {
+  width: 50%;
+  position: relative;
+  right: 0;
+}
+
+.download .download-slideshow .slideshow-items .item-image {
+  position: absolute;
+  right: 260px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.download .download-slideshow .slideshow-items .active-item {
+  z-index: 9;
+}
+
+.download .download-slideshow .slideshow-items .faded-item-left {
+  z-index: 5;
+  -webkit-transform: translate(44px, -50%);
+          transform: translate(44px, -50%);
+}
+
+.download .download-slideshow .slideshow-items .faded-item-right {
+  z-index: 5;
+  -webkit-transform: translate(-100px, -50%);
+          transform: translate(-100px, -50%);
+}
+
 /* Desktop */
 @media only screen and (min-device-width: 801px) {
   .hero .tablet {
@@ -475,6 +569,22 @@ body {
   }
   h3.mobile, p.mobile {
     display: none;
+  }
+}
+
+/* small desktop */
+@media only screen and (min-device-width: 801px) and (max-device-width: 1280px) {
+  .technology {
+    top: calc(355px + 782px - 124px);
+  }
+  .download {
+    top: calc(660px + 355px - 124px);
+  }
+  .download .download-text p, .download .download-text h2, .download .download-text .download-icons {
+    width: 70%;
+  }
+  .download .download-slideshow .slideshow-items .item-image {
+    right: 75px;
   }
 }
 
@@ -503,6 +613,9 @@ body {
   .hero .desktop {
     display: none;
   }
+  h3.mobile, p.mobile {
+    display: none;
+  }
   .features .cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -511,9 +624,33 @@ body {
     -ms-flex-line-pack: distribute;
         align-content: space-around;
   }
-  h3.mobile, p.mobile {
-    display: none;
+  .technology {
+    top: calc( 782px + 124px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
+  .technology .title {
+    margin-bottom: 100px;
+  }
+  .technology .boxes {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+  }
+  .technology .boxes .tech_box {
+    margin-top: 0;
+  }
+}
+
+.download {
+  top: calc( 782px + 124px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* mobile */
