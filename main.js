@@ -1,3 +1,6 @@
+// mobile menu //
+
+
 const $hamburger = document.querySelector(".hamburger");
 const $mobileMenu = document.querySelector('.menu-hamburger');
 
@@ -5,10 +8,19 @@ const activateHamburger = () => {
     $hamburger.classList.toggle('hamburger-active');
     $mobileMenu.classList.toggle('menu-hamburger-active');
 };
-// const showMobileMenu = () => {
-// }
 
+        // show / hide hamburger and menu on click //
 $hamburger.addEventListener('click', activateHamburger);
+$mobileMenu.addEventListener('click', activateHamburger);
+
+
+// window.addEventListener('click', function(event) {
+//     if (event.target !== document.querySelector('.menu-hamburger-active') ) {
+//         activateHamburger();
+//     }
+// })
+
+
 
 
 // slider //
