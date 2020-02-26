@@ -1041,6 +1041,8 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     border: none;
+    top: 900px;
+    height: 300px;
   }
   .contact .contact-left {
     width: 100%;
@@ -1056,7 +1058,6 @@ body {
   }
   .contact .contact-form-wrapper .contact-form {
     width: 100%;
-    top: -100px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1067,7 +1068,7 @@ body {
     width: 100%;
   }
   .contact .contact-form-wrapper .contact-form .column-full button, .contact .contact-form-wrapper .contact-form .column-half button {
-    margin: 0 30px;
+    margin: 0 30px 50px;
   }
   .contact .contact-form-wrapper .contact-form .column-full .chevron:after, .contact .contact-form-wrapper .contact-form .column-half .chevron:after {
     -webkit-transform: translate(-600%, 0%);

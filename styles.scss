@@ -884,6 +884,8 @@ body {
         display: flex;
         flex-wrap: wrap;
         border: none;
+        top: 900px;
+        height: 300px;
         .contact-left {
             width: 100%;
             height: 200px;
@@ -894,16 +896,17 @@ body {
             }
         }
         .contact-form-wrapper {
+
             width: 100%;
             .contact-form {
                 width: 100%;
-                top: -100px;
+                // top: -100px;
                 flex-direction: column;
                 .column-full, .column-half {
                     margin: 0 auto;
                     width: 100%;
                     button {
-                        margin: 0 30px;
+                        margin: 0 30px 50px;
                     }
                     .chevron:after {
                         transform: translate(-600%, 0%);
