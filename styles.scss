@@ -3,6 +3,7 @@
     font-family: 'Lato', ;
     box-sizing: border-box;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /* MIXINS */
@@ -452,6 +453,7 @@ body {
                 right: 260px;
                 top: 50%;
                 transform: translate(0, -50%);
+
             }
             .active-item {
                 z-index: 9;
@@ -651,16 +653,17 @@ body {
             right: 75px;
         }
     }}}
-}
-.contact {
-    top: calc(660px + 355px - 124px);
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    height: 700px;
-    .contact-form-wrapper {
-        top: 200px;
+
+    .contact {
+        top: calc(660px + 355px - 124px);
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        height: 700px;
+        .contact-form-wrapper {
+            top: 200px;
+        }
     }
 }
 
@@ -847,6 +850,10 @@ body {
                 width: 100%;
                 object-fit: scale-down;
                 position: relative;
+                transform: transition(all 0.3s ease-out);
+                transform: transition(all 0.3s ease-out);
+
+
                 .item-image {
                     position: absolute;
                     width: 100%;
@@ -860,14 +867,19 @@ body {
                 }
                 .active-item {
                     z-index: 9;
+                    transform: transition(all 0.3s ease-out);
+
                 }
                 .faded-item-left {
                     z-index: 5;
                     // transform: translate(44px, -50%);
+                    transform: transition(all 0.3s ease-out);
                 }
                 .faded-item-right {
                     z-index: 5;
                     // transform: translate(-100px, -50%);
+                    transform: transition(all 0.3s ease-out);
+
                 }
                 .download-slideshow {
                     width: 50%;
