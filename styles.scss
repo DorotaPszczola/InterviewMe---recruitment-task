@@ -124,7 +124,6 @@ body {
         }
     }
 }
-
 .logo {
     background-image: url(assets/logo.png);
     position: absolute;
@@ -163,7 +162,6 @@ body {
 
 
 /* Tablet & mobile hamburger */
-
 
 .hamburger {
     position: absolute;
@@ -482,7 +480,6 @@ body {
         position: relative;
         h2 {
             @include section-title();
-            // color: #FFFFFF;
             text-align: left;
             width:445px;
             top: 117px;
@@ -695,7 +692,6 @@ body {
         }
     }
 
-
     h3.mobile, p.mobile {
         display: none;
     }
@@ -706,7 +702,6 @@ body {
             align-content: space-around;
         }
     }
-
     .technology {
         top: calc( 782px + 124px);
         display: flex;
@@ -726,7 +721,6 @@ body {
         display: flex;
         flex-wrap: wrap;
         border: none;
-
         .download-text {
             width: 100%;
             height: 500px;
@@ -826,7 +820,6 @@ body {
         }
     }
     .download {
-        // top: calc( 782px + 124px);
         display: flex;
         flex-wrap: wrap;
         border: none;
@@ -868,7 +861,6 @@ body {
                 .active-item {
                     z-index: 9;
                     transform: transition(all 0.3s ease-out);
-
                 }
                 .faded-item-left {
                     z-index: 5;
@@ -879,7 +871,6 @@ body {
                     z-index: 5;
                     // transform: translate(-100px, -50%);
                     transform: transition(all 0.3s ease-out);
-
                 }
                 .download-slideshow {
                     width: 50%;

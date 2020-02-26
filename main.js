@@ -61,9 +61,7 @@ window.onload = changeImg;
 			e.preventDefault();
 			let json = toJSONString( this );
 			output.innerHTML = json;
-
 		}, false);
-
 	});
 
 })();
