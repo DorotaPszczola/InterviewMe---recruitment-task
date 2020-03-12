@@ -1,3 +1,6 @@
+@import "mixins";
+@import "vars";
+
 * {
     margin: 0;
     font-family: 'Lato', ;
@@ -6,29 +9,6 @@
     scroll-behavior: smooth;
 }
 
-/* MIXINS */
-
-@mixin hamburger-line {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    position: absolute;
-}
-
-@mixin section_title {
-    position: absolute;
-    height: 55px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(845px - 782px);
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 43px;
-    text-align: center;
-    color: #000000;
-}
 
 /* BODY */
 
@@ -63,11 +43,9 @@ body {
 }
 .hero {
     text-align: center;
-    color: white;
+    color: $color2;
     h1 {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        @include centered_hor();
         overflow: hidden;
         text-align: center;
         top: 257px;
@@ -78,48 +56,32 @@ body {
         line-height: 86px;
         letter-spacing: 0.05em;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: $color2;
     }
     h3 {
-        position: absolute;
+        @include centered_hor;
         height: 124px;
-        left: 50%;
-        transform: translateX(-50%);
         top: 382px;
-        color: #FFFFFF;
+        color: $color2;
         font-family: Lato;
         font-style: normal;
         font-weight: 600;
         font-size: 24px;
-        line-height: 150%;
-        /* or 36px */
+        line-height: 36px;
         text-align: center;
     }
 
     /* Button */
     .btn-sign-up {
-        position: absolute;
-        width: 160px;
-        height: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 545px;
-        background: #FFFFFF;
-        border-radius: 6px;
-        border-style: none;
-        font-family: Lato;
-        font-style: normal;
+        @include centered_hor;
+        @include button($color2, $color1);
         font-weight: 600;
-        font-size: 14px;
-        line-height: 17px;
-        align-items: center;
-        text-transform: uppercase;
-        color: #ED4C5C;
+        border-style: none;
         transition: all .2s ease-in-out;
         &:hover {
-            color: #FFFFFF;
-            background: #ED4C5C;
-            border: solid #FFFFFF 2px;
+            color: $color2;
+            background: $color1;
+            border: solid $color2 2px;
             cursor: pointer;
         }
     }
@@ -154,7 +116,7 @@ body {
             }
             a {
                 text-decoration: none;
-                color: #FFFFFF;
+                color: $color2;
             }
         }
     }
@@ -183,7 +145,6 @@ body {
         .hamburger-inner{
             left: 0;
             top: 50%;
-            // transform: translate(-50%);
             @include hamburger-line();
             transition: background-color .1s .1s ease-in-out;
         }
@@ -223,9 +184,7 @@ body {
     padding-right: 50px;
     transform: translateY(-100vh);
     ul {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        @include centered_hor_vert();
         position: relative;
         text-align: center;
     }
@@ -244,7 +203,7 @@ body {
         }
         a {
             text-decoration: none;
-            color: #FFFFFF;
+            color: $color2;
         }
     }
 }
@@ -303,10 +262,7 @@ body {
                     text-align: center;
                 }
                 span {
-                    position: absolute;
-                    height: 18px;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    @include centered_hor();
                     top: 155px;
                     font-family: Lato;
                     font-style: normal;
@@ -316,19 +272,19 @@ body {
                     text-align: center;
                     a {
                         text-decoration: none;
-                        color: #ED4C5C;
+                        color: $color1;
                     }
                 }
             }
         }
         .card-1 {
-            background: url(assets/Bg_card_1.png), #FFFFFF;
+            background: url(assets/Bg_card_1.png), $color2;
         }
         .card-2 {
-            background: url(assets/Bg_card_2.png), #FFFFFF;
+            background: url(assets/Bg_card_2.png), $color2;
         }
         .card-3 {
-            background: url(assets/Bg_card_3.png), #FFFFFF;
+            background: url(assets/Bg_card_3.png), $color2;
         }
     }
 }
@@ -400,18 +356,18 @@ body {
 /* download */
 
 .download {
-    background: #ED4C5C;
+    background: $color1;
     height: 500px;
     position: relative;
     top: 660px;
-    color: #FFFFFF;
+    color: $color2;
     display: flex;
     .download-text {
         width: 50%;
         position: relative;
         h2 {
             @include section-title();
-            color: #FFFFFF;
+            color: $color2;
             text-align: left;
             width:445px;
             top: 122px;
@@ -422,18 +378,14 @@ body {
             font-size: 14px;
             line-height: 20px;
             text-align: justify;
-            position: absolute;
             width: 445px;
             height: 64px;
-            left: 50%;
-            transform: translateX(-50%);
             top: 253px;
+            @include centered_hor;
         }
         .download-icons {
-            left: 50%;
-            transform: translateX(-50%);
+            @include centered_hor;
             top: 389px;
-            position: absolute;
             width: 445px;
             .download-icon {
                 margin-right: 25px;
@@ -490,12 +442,10 @@ body {
             font-size: 14px;
             line-height: 20px;
             text-align: justify;
-            position: absolute;
             width: 434px;
             height: 64px;
-            left: 50%;
-            transform: translateX(-50%);
             top: 213px;
+            @include centered_hor;
         }
     }
     .contact-form-wrapper {
@@ -544,14 +494,14 @@ body {
             margin-bottom: 20px;
             transform: transition(all 0.3s ease-out);
             &.focus{
-                background-color: #fff;
-                border: solid 1px darken(#333, 10%);
+                background-color: $color2;
+                border: solid 1px darken($color3, 10%);
             }
             label {
                 display: block;
                 font-weight: 300;
                 z-index: 1;
-                color: rgba(19, 39, 67, 0.5);
+                color: $color4;
                 font-size: 14px;
                 line-height: 10px;
             }
@@ -559,12 +509,12 @@ body {
                 position: relative;
                 background-color: transparent;
                 padding-left: 20px;
-                border: 1px solid #333333;
+                border: 1px solid $color3;
                 border-radius: 6px;
                 position: relative;
                 z-index: 2;
                 font-size: 16px;
-                color: rgba(19, 39, 67, 0.5);
+                color: $color4;
             }
             input:focus::placeholder {
                 color: transparent;
@@ -573,7 +523,7 @@ body {
         .chevron:after {
             content: '\f078';
             font: normal normal normal 17px/1 FontAwesome;
-            color: rgba(19, 39, 67, 0.5);
+            color: $color4;
             right: 11px;
             top: 6px;
             height: 34px;
@@ -588,25 +538,15 @@ body {
             width: 540px;
         }
         .button {
-            background-color: #ED4C5C;;
-            width: 160px;
-            height: 50px;
-            top: 545px;
-            font-family: Lato;
-            font-style: normal;
-            font-size: 14px;
-            line-height: 17px;
-            align-items: center;
-            text-transform: uppercase;
-            color: white;
-            border: 1.5px solid #ED4C5C;
+            @include button($color1, $color2);
+            border: 1.5px solid $color1;
             border-radius: 6px;
             transition: all .2s ease-in-out;
             &:hover,
             &:focus {
-                color: #ED4C5C;
-                background: white;
-                border: 1.5px solid #ED4C5C;
+                color: $color1;
+                background: $color2;
+                border: 1.5px solid $color1;
                 cursor: pointer;
                 font-weight: 600;
             }
