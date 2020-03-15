@@ -1,4 +1,4 @@
-# InterviewMe---recruitment-task
+# Recruitment-task
 Creating landing page for webmaster position
  * CSS3
  * HTML5
