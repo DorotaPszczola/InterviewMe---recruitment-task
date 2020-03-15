@@ -5,5 +5,7 @@ Creating landing page for webmaster position
  * SASS
  * JavaScript
 
+Some issues to be fixed soon
+
 GitHub Pages link:
 [recruitment-task](https://dorotapszczola.github.io/Recruitment-task/)
