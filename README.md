@@ -6,4 +6,4 @@ Creating landing page for webmaster position
  * JavaScript
 
 GitHub Pages link:
-[recruitment-task](https://dorotapszczola.github.io/InterviewMe---recruitment-task/)
+[recruitment-task](https://dorotapszczola.github.io/Recruitment-task/)
