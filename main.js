@@ -14,14 +14,6 @@ $hamburger.addEventListener('click', activateHamburger);
 $mobileMenu.addEventListener('click', activateHamburger);
 
 
-// window.addEventListener('click', function(event) {
-//     if (event.target !== document.querySelector('.menu-hamburger-active') ) {
-//         activateHamburger();
-//     }
-// })
-
-
-
 
 // slider //
 
